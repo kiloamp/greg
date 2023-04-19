@@ -1,0 +1,25 @@
+body {font-family: Arial, Helvetica, sans-serif; 
+	margin-left: auto; 
+	margin-right: auto; 
+	max-width: 65rem;
+	padding: 2rem;}
+table td{font-size: 12px;
+	 border:1px solid #bfbfbf;
+ 	 }
+table td ul {list-style-type:circle;
+	     margin:12px;
+     	     padding:0px;}
+
+table {padding-top: 4rem}
+
+.today {border: 3px solid orange !important;}
+.noday {}
+.sat, .sun {background-color: lightyellow;}
+
+.crossed {
+	background-color: lightgrey !important;
+	opacity: 0.7 !important;	}
+.event{
+	background-color: palegreen;
+}
+
