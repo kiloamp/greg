@@ -1,0 +1,15 @@
+{
+  "name": "greta",
+  "version": "1.0.0",
+  "description": "greg2 ",
+  "main": "index.js",
+  "scripts": {
+    "test": "npx tsc greta.ts && node greta.js"
+  },
+  "author": "",
+  "license": "ISC",
+  "devDependencies": {
+    "@types/node": "^20.3.1",
+    "typescript": "^5.1.3"
+  }
+}
