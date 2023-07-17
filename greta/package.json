@@ -4,12 +4,21 @@
   "description": "greg2 ",
   "main": "index.js",
   "scripts": {
-    "test": "npx tsc greta.ts && node greta.js"
+    "grtest": "npx tsc greta.ts && node greta.js",
+    "trtest": "npx tsc && node translator.js"
   },
   "author": "",
   "license": "ISC",
   "devDependencies": {
     "@types/node": "^20.3.1",
+    "@types/react": "^18.2.15",
+    "@types/react-dom": "^18.2.7",
     "typescript": "^5.1.3"
+  },
+  "dependencies": {
+    "date-fns": "^2.30.0",
+    "prettier": "^3.0.0",
+    "react": "^18.2.0",
+    "react-dom": "^18.2.0"
   }
 }

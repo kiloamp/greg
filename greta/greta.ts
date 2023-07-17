@@ -1,10 +1,12 @@
+// @ts-nocheck 
+
 /*
 Requirements:
 - Ability to separate notes from events
 - Range of dates
 */
 
-type Thing = {
+export type Thing = {
     description: string,
     type: "event" | "note",
     date: {
@@ -70,7 +72,7 @@ function parseCommand(command: string): Thing {
     };
 }
 
-function parseDate(dateString) { //thanksGPT
+function parseDate(dateString:string) { //thanksGPT
     const monthMap = {
         jan: 0, feb: 1, mar: 2, apr: 3, may: 4, jun: 5,
         jul: 6, aug: 7, sep: 8, oct: 9, nov: 10, dec: 11
