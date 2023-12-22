@@ -50,7 +50,7 @@ const TEST_COMMANDS: { [key: string]: Thing } = {
     }
 }
 
-function parseCommand(command: string): Thing {
+export function parseCommand(command: string): Thing {
     const parts = command.split(" ");
     for(let part of parts){
         console.log(part)

@@ -164,4 +164,25 @@ async function main() {
   console.log(await prettier.format(html, { parser: "html" }));
 }
 
+
+export function refresh(command: Thing[]): string {
+  const html = renderToStaticMarkup(
+    <html>
+      <head>
+        <link rel="stylesheet" href="style.css" />
+      </head>
+      <body>
+        <div className="calendar">
+          <Year
+            date={new Date()}
+            things={command}
+          ></Year>
+        </div>
+      </body>
+    </html>
+  );
+  return html;
+}
+
+
 main();
