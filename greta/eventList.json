@@ -6,29 +6,5 @@
       "from": "27/4/2024",
       "to": "28/4/2024"
     }
-  },
-  {
-    "description": "easy test",
-    "type": "event",
-    "date": {
-      "from": "20/11/2024",
-      "to": "20/11/2024"
-    }
-  },
-  {
-    "description": "easy",
-    "type": "event",
-    "date": {
-      "from": "21/11/2024",
-      "to": "21/11/2024"
-    }
-  },
-  {
-    "description": "with index",
-    "type": "event",
-    "date": {
-      "from": "22/11/2024",
-      "to": "22/11/2024"
-    }
   }
 ]
