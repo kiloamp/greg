@@ -1,0 +1,19 @@
+[
+    {
+      "description": "3pm banana",
+      "type": "event",
+      "date": {
+        "from": "5/1/2023",
+        "to": "5/1/2023"
+      }
+    },
+    {
+      "description": "LAX",
+      "type": "note",
+      "date": {
+        "from": "18/1/2023",
+        "to": "31/1/2023"
+      }
+    }
+  ]
+  
