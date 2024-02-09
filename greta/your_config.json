@@ -1,0 +1,5 @@
+{
+ "token": "your token and your clientID look very similar i think?",
+ "clientId": "this is on the bot main page",
+ "guildId": "but this one is on Bot and Auth i think..? it's a bit messy they are always changing it apparently"
+}
