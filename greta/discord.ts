@@ -41,8 +41,24 @@ client.on("messageCreate", function (msg) {
 		writeFileSync('/home/carlos/calendarnew/index.html', htmlString);
 	}
 
-	else if (msg.content.indexOf("list") === 0) {
-		msg.channel.send("Coming soon to a Greg near you");
+	else if (msg.content.indexOf("note") === 0) {
+		const parsed = parseCommand(msg.content);
+		msg.channel.send(JSON.stringify(parsed));
+		let eventList;
+
+		try {
+			eventList = JSON.parse(readFileSync('eventList.json', 'utf8'));
+		} catch (error) {
+			console.error(error);
+			console.log("EventList JSON file was created")
+			eventList = [];
+			// Expected output: ReferenceError: nonExistentFunction is not defined
+			// (Note: the exact output may be browser-dependent)
+		}
+		eventList.push(parsed);
+		writeFileSync('eventList.json', JSON.stringify(eventList, null, 2));
+		const htmlString = refresh(eventList);
+		writeFileSync('/home/carlos/calendarnew/index.html', htmlString);
 	}
 });
 

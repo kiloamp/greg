@@ -73,15 +73,15 @@ function Month(props: MonthProps) {
   return (
     <>
       <div className="month">
-        <h2>{monthName}</h2>
+        <h2 id={monthName}>{monthName}</h2>
         <div className="days">
-          <h3 className="header">Mon</h3>
-          <h3 className="header">Tue</h3>
-          <h3 className="header">Wed</h3>
-          <h3 className="header">Thr</h3>
-          <h3 className="header">Fri</h3>
-          <h3 className="header">Sat</h3>
-          <h3 className="header">Sun</h3>
+         	<h3 className="header">Mon</h3>
+          	<h3 className="header">Tue</h3>
+          	<h3 className="header">Wed</h3>
+          	<h3 className="header">Thr</h3>
+          	<h3 className="header">Fri</h3>
+          	<h3 className="header">Sat</h3>
+          	<h3 className="header">Sun</h3>
           {monthArray}
         </div>
       </div>
@@ -100,6 +100,7 @@ function Thing(props: ThingProps) {
 
 function Day(props: DayProps) {
   var dayNumber = format(props.date, "d"); // 12
+  var dayOfYear = differenceInCalendarDays(props.date, startOfYear(props.date)) + 1; // Adding 1 because it's 1-based index
   var thingsToday = props.things
     .filter(
       (thing) =>
@@ -118,7 +119,7 @@ function Day(props: DayProps) {
   return (
     <>
       <div className="day">
-        <h3>{dayNumber}</h3>
+        <h3 id={`${dayOfYear}`}>{dayNumber}</h3>
         {thingsToday.map((thing) => (
           <Thing thing={thing}></Thing>
         ))}
@@ -131,6 +132,7 @@ async function main() {
   const html = renderToStaticMarkup(
     <html>
       <head>
+	<title>Calendar CL</title>
         <link rel="stylesheet" href="style.css" />
       </head>
       <body>
@@ -170,6 +172,9 @@ export function refresh(command: Thing[]): string {
     <html>
       <head>
         <link rel="stylesheet" href="style.css" />
+	<title>Calendar :)</title>
+	<link rel="icon" type="image/x-icon" href="favicon.ico" />
+	<script src="script.js"></script>
       </head>
       <body>
         <div className="calendar">
